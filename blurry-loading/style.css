@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg {
+  background: url("./bg.jpg") no-repeat center / cover;
+  width: calc(100vw + 60px);
+  height: calc(100vh + 60px);
+  animation: showing 3s forwards;
+  position: fixed;
+  top: -30px;
+  left: -30px;
+}
+
+.loading {
+  font-size: 4rem;
+  color: white;
+  animation: hiding 3s forwards;
+}
+
+@keyframes hiding {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes showing {
+  from {
+    filter: blur(30px);
+  }
+  to {
+    filter: blur(0px);
+  }
+}
